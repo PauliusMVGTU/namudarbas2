@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="smartstyles.css">
+  <title>Smart Home Interface</title>
+</head>
+<body>w
+
+<div class="container">
+  <div class="device" id="lights">
+    <h2>Lights</h2>
+    <div class="switch-container">
+      <label class="switch">
+        <input type="checkbox" onclick="toggleLights()">
+        <span class="slider"></span>
+      </label>
+    </div>
+  </div>
+
+  <div class="device" id="temperature">
+    <h2>Temperature</h2>
+    <input type="range" min="10" max="35" value="24" class="temperature-slider" oninput="updateTemperature(this.value)">
+    <span class="temperature" id="temperatureDisplay">24°C</span>
+  </div>
+
+  <div class="device" id="security">
+    <h2>Security</h2>
+    <div class="switch-container">
+      <label class="switch">
+        <input type="checkbox" onclick="toggleSecurity()">
+        <span class="slider"></span>
+      </label>
+    </div>
+  </div>
+</div>
+<script src="smartscript.js"></script>
+</body>
+</html>
